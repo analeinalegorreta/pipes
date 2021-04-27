@@ -1,0 +1,272 @@
+/* const usuario = "Hola";
+
+
+
+const uno= Array.from(usuario);
+console.table(uno)
+const dos = new Array (usuario.length);
+var a=0;
+for (i=usuario.length-1; i>=0; i--){
+   // console.log(uno[i]);
+    dos[a] =  uno[i]
+    a=a+1;
+}
+
+console.table(dos); 
+
+
+----------------------------------------- 
+
+
+
+
+ const carrito=[
+   {nombre:'Monito 27 pulgadas',precio:500},
+   {nombre:'Television',precio:100},
+   {nombre:'Tablet',precio:200, descuento:true},
+   {nombre:'audifonos',precio:300},
+   {nombre:'Teclado',precio:400},
+   {nombre:'Celular',precio:700}
+   ]
+
+for(i=0;i<carrito.length;i++) {
+   if(carrito[i].descuento==true){
+
+      console.log(`El producto ${carrito[i].nombre} tiene descuento`);
+continue;
+   }
+  
+console.log(carrito[i].nombre)
+
+}
+
+-----------------------------------------------------------------------------------
+
+
+var contador= new Array(28)
+for (i=0; i<contador.length; i++){
+    contador[i]=0
+}
+var abc= new Array("a","b","c","d","e","f","g","h","i","j","k","l","m","n","ñ","o","p","q","r","s","t","u","v","w","x","y","z")
+for (i=0; i<contador.length; i++){
+   contador[i]=0
+}
+
+const usuario = "Hoollllllaaaaaaaaaaa";
+const uno= Array.from(usuario);
+
+const dos = new Array (usuario.length);
+for (i=0; i<usuario.length; i++){
+
+  
+   
+    console.log(uno[i]);
+
+       if(uno[i]=='H'){
+        contador[7]=contador[7]+1
+         }
+         if(uno[i]=='o'){
+            contador[15]=contador[15]+1
+             }
+
+             if(uno[i]=='l'){
+                contador[11]=contador[11]+1
+                 }
+                 if(uno[i]=='a'){
+                    contador[0]=contador[0]+1
+                     }
+    
+
+  
+}
+ for(i=0;i<contador.length;i++){
+    console.log("contiene la letra " +abc[i]+" "+ contador[i]);
+    
+ }
+
+
+
+ for (i=0; i<usuario.length; i++){
+
+
+   
+ }
+
+
+
+
+
+
+------------------------------------------------------------------------------
+      
+   
+   for(a=0;a<=100;a+=3){
+      
+    console.log(a);
+
+      } 
+ 
+
+      for(i=1;i<=100;i++){
+         if(i%15==0){
+
+            console.log(`El producto ${i} es multipllo de hola`);
+         }
+      else if(i%3==0){
+         console.log(`El producto ${i} es multipllo de 3`);
+
+      }else if (i%5==0){
+         console.log(`El producto ${i} es multipllo de 5`);
+
+      }
+       
+      
+           }
+
+           
+--------------------pendiente vocales en una cadena de caracteres
+
+         
+         
+           ------------------------------ numeros pares e impares con while 
+
+           let i=1;
+           while(i<100){
+              if(i%2==0){
+               console.log(`el numero ${i} es par`)
+
+              }else 
+
+              console.log(`el numero ${i} es impar`)
+
+
+            i++;
+
+           }
+
+
+
+const resultado=uno.includes(contiene);
+console.log(resultado)
+
+
+
+
+
+
+
+
+
+
+/*const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'];
+
+const carrito = [
+    { nombre: 'Monitor 27 Pulgadas', precio: 500 },
+    { nombre: 'Televisión', precio: 100 },
+    { nombre: 'Tablet', precio: 200 },
+    { nombre: 'Audifonos', precio: 300 },
+    { nombre: 'Teclado', precio: 400 },
+    { nombre: 'Celular', precio: 700 },
+]
+
+meses.forEach(mes=>{
+if(mes === 'Enero'){
+
+    console.log('Enero existe')
+
+}
+
+});
+
+
+
+
+
+
+const usuario = "Holaa";
+const uno= Array.from(usuario);
+contador=0
+
+uno.forEach(cont=>{
+
+    if(cont == 'a'){
+        var z= contador+1
+console.log("La palabra "+usuario+" contiene la vocal "+'a')
+
+    }else if (cont == 'e'){
+        console.log("La palabra "+usuario+" contiene la vocal "+'e')
+
+    }else if (cont == 'i'){
+        console.log("La palabra "+usuario+" contiene la vocal "+'i')
+
+    }else if (cont == 'o'){
+        console.log("La palabra "+usuario+" contiene la vocal "+'o')
+
+    }else if (cont == 'u'){
+        console.log("La palabra "+usuario+" contiene la vocal "+'u')
+    }
+   
+   
+});
+
+ otra forma con forEach --------------------------------------------------
+
+
+
+const usuario = "Holaa";
+const uno= Array.from(usuario);
+
+let total=0;
+var res=uno.length
+
+console.log(res)
+
+uno.forEach(cont=> {
+
+    if(cont === 'a'){
+
+
+        var cuatro= total+1
+
+        console.log(`La palabra contiene la vocal ${cont} ${cuatro}`)
+
+    }else if (cont == 'e'){
+    console.log(`La palabra contiene la vocal ${cont}`)
+
+}else if (cont == 'i'){
+    console.log(`La palabra contiene la vocal ${cont}`)
+
+}
+else if (cont == 'o'){
+    console.log(`La palabra contiene la vocal ${cont}`)
+
+}else if (cont == 'u'){
+    console.log(`La palabra contiene la vocal ${cont}`)
+
+}
+
+   
+   
+   
+});
+
+*/
+
+
+const usuario = "Holaa";
+const uno= Array.from(usuario);
+
+var resultado;
+resultado =uno.filter(abc => abc=='a')
+console.log(`La palabra contiene la vocal `+resultado)
+resultado =uno.filter(abc => abc=='e')
+console.log(`La palabra contiene la vocal `+resultado)
+resultado =uno.filter(abc => abc=='i')
+console.log(`La palabra contiene la vocal `+resultado)
+resultado =uno.filter(abc => abc=='o')
+console.log(`La palabra contiene la vocal `+resultado)
+resultado =uno.filter(abc => abc=='u')
+console.log(`La palabra contiene la vocal `+resultado)
+
+
+
