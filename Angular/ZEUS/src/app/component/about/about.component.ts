@@ -1,6 +1,7 @@
 import { NgForm } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { empleadoModel } from 'src/app/models/empleado.model';
+import { EmpleadosService } from 'src/app/services/empleados.service';
 
 @Component({
   selector: 'app-about',
@@ -9,29 +10,30 @@ import { empleadoModel } from 'src/app/models/empleado.model';
 })
 export class AboutComponent implements OnInit {
 
-  empleado=new empleadoModel();
+  usuario=new empleadoModel();
 
 
-  usuario = {
-    nombre:'',
-    appellido:'',
-    date: ''
-  }
+ 
 
-  constructor() { }
+  constructor(private servicioEmpleados:EmpleadosService) { }
 
   ngOnInit(): void {
   }
 
   guardar(forma: NgForm) {
 
-    console.log(forma)
+
+    console.log(this.usuario)
 
     if(forma.invalid){
       Object.values(forma.controls).forEach(control =>{
         control.markAllAsTouched();
       })
       return;
+    }else{
+      this.servicioEmpleados.crearEmpleado(this.usuario).subscribe(resp=>{
+        console.log(resp)
+      });
     }
 
   }

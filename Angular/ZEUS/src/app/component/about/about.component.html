@@ -17,12 +17,12 @@
                             class="form-control mt-3"
                              id="name"
                              name="nombre"
-                             ngModel
                                 placeholder="Enter your name"
                                 required
                                 maxlength="30"
                                 [class.is-invalid]="nombre.invalid && nombre.touched"
                                 #nombre="ngModel"
+                               [(ngModel)]="usuario.name"
                                 >
                                 <small class="form-text text-danger"
                                 *ngIf="nombre.invalid && nombre.touched">Campo requerido*</small>
@@ -37,7 +37,7 @@
                             class="form-control mt-3"
                              id="lasTname"
                              name="lastName"
-                             ngModel
+                             [(ngModel)]="usuario.last_name"
                                 placeholder="Enter your Last Name"
                                 required
                                 maxlength="30"
@@ -58,12 +58,11 @@
                             class="form-control mt-3" 
                             id="birthday"
                             name="fechaDate"
-                            ngModel
+                            [(ngModel)]="usuario.birthday"
                                 placeholder="Enter your name Birthday "
                                 required
                                 [class.is-invalid]="fechaDate.invalid && fechaDate.touched"
                                 #fechaDate="ngModel"
-                                pattern="^\d{4}([\-/.])(0?[1-9]|1[1-2])\1(3[01]|[12][0-9]|0?[1-9])$"
                                 >
                                 <small class="form-text text-danger"
                                 *ngIf="fechaDate.invalid && fechaDate.touched">Campo requerido*</small>
