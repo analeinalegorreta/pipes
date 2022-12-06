@@ -1,8 +1,8 @@
 export class empleadoModel{
 
-    name:any;
-    last_name:any;
-    birthday: any
+    name:string;
+    last_name:string;
+    birthday: Date;
 
     constructor(){
         

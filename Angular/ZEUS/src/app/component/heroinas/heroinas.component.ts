@@ -12,7 +12,7 @@ export class HeroinasComponent implements OnInit {
 
  empleados : any []=[];
   constructor( private http:HttpClient) {
-    this.http.get('https://6edeayi7ch.execute-api.us-east-1.amazonaws.com/v1/examen/employees/analeinalegorretajulio')
+    this.http.get('https://6edeayi7ch.execute-api.us-east-1.amazonaws.com/v1/examen/employees/ana')
     .subscribe((respuesta:any)=>{
       this.empleados=respuesta.data.employees;
       console.log( this.empleados);
