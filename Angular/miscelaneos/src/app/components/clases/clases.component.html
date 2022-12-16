@@ -1,0 +1,150 @@
+<div [ngClass]="alerta" class="alert " role="alert">
+    A simple primary alert—check it out!
+</div>
+
+<button type="button" class="btn btn-outline-primary m-3" (click)="alerta=alertinfo">Alerta</button>
+
+<button type="button" class="btn btn-outline-success m-3" (click)="alerta=negro">Success</button>
+
+<h3 [ngClass]="{'text-danger':true}">
+    Hola Ana 
+</h3>
+
+
+<h3 [ngClass]="{'text-danger':false}">
+    Hola Ana 
+</h3>
+
+
+
+<h3 [ngClass]="{'text-secondary':propiedades.color, 'text-danger':!propiedades.color}">
+    Hola Mundo
+</h3>
+
+
+<button 
+type="button"
+class="btn btn-primary m-3" 
+(click)="!propiedades.color=!propiedades.color"
+[ngClass]="{'btn-success':propiedades.color, 'btn-danger':!propiedades.color}"
+
+>Success</button>
+
+<br><br>
+
+<!-- La clase de fa-save coloca el icono de Guardar
+la clase de refres el icono de rueda y la clase de spin lo hace girar -->
+
+<button (click)="ejecutar()" 
+type="button" class="btn btn-info m-3"
+[disabled]="loading">
+<span *ngIf="!loading">Guardar Cambios  </span>
+<span *ngIf="loading">Espere por favor ... </span>
+    <i 
+    [ngClass]="{'fa-save':!loading, 'fa-refresh fa-spin':loading}"
+    class="fa"></i>
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
