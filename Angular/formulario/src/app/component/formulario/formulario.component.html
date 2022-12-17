@@ -1,0 +1,77 @@
+<div class="container_primary">
+    <div class="tituloNuevo">
+        Contacto
+    </div>
+    <form action="" autocomplete="off" [formGroup]="forma" (ngSubmit)="guardar()">
+        <div class="form_container">
+            <div>
+                <div class="form_group">
+                   
+                        <select name="" id="tipo" class="form-select" (change)="selectItem($event)"  formControlName="tipo">
+                            <option *ngFor="let tipo of tipoCombo;let i = index"
+                                [ngClass]="{'selected': i===selectedIndex}" >
+                                {{tipo}}
+                            </option>
+                        </select>{{forma.get('tipo')?.invalid}}
+                    
+                    <label for="tipo" class="form_label">*Tipo</label>
+                    <span class="form_line"></span>
+                </div>
+
+                <div class="form_group">
+                    <input type="text" type="text" id="nombre" class="form_input form-control" placeholder=""
+                        formControlName="nombre" [class.is-invalid]="nombreValido">{{forma.get('nombre')?.invalid}}
+                    <label for="nombre" class="form_label">*Nombre</label>
+                    <span class="form_line"></span>
+                </div>
+                <div class="form_group">
+                    <input type="text" type="text" id="mail" class="form_input form-control" placeholder=""
+                        formControlName="email" [class.is-invalid]="emailValido">{{forma.get('email')?.invalid}}
+                    <label for="mail" class="form_label">*Email</label>
+                    <span class="form_line"></span>
+                </div>
+                <div class="form_group">
+                    <select name="" id="layout" class="form-select" (change)="selectItemLayout($event)" formControlName="layout" [class.is-invalid]="leyautValido">
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>{{forma.get('layout')?.invalid}}
+                    <label for="layout" class="form_label">Se envia Layout</label>
+                    <span class="form_line"></span>
+                </div>
+            </div>
+
+            <div>
+
+                <div class="form_group">
+                    <img src="assets/images/plusCircle.svg" alt="yoast seo" height="20" width="20"
+                        class="iconoAgreTipo" />
+                </div>
+                <div class="form_group">
+                    <input type="text" type="text" id="tel" class="form_input form-control" placeholder=""
+                        formControlName="telefono" [class.is-invalid]="telefonoValido" appOnlynumber>
+                    <label for="tel" class="form_label">*Tel. Ext.</label>
+                    <span class="form_line"></span>
+                </div>{{forma.get('telefono')?.invalid}}
+                <div class="form_group">
+                    <input type="text" type="text" id="puesto" class="form_input form-control" placeholder=""
+                        formControlName="puesto" [class.is-invalid]="puestoValido">
+                    <label for="puesto" class="form_label">*Puesto</label>
+                    <span class="form_line"></span>
+                </div>{{forma.get('puesto')?.invalid}}
+
+                <!-- <div class="form_group">
+                    <input type="text" type="text" id="prueba" class="form_input form-control" placeholder=""
+                        formControlName="prueba" [class.is-invalid]="pruebaValido">
+                </div>
+                <input type="text" type="text" id="prueba2" class=" form-control" placeholder=""
+                    formControlName="prueba2" [class.is-invalid]="pruebaValido2"> -->
+            </div>
+
+        </div>
+        <button type="submit" class="" value="Agregar"  [ngClass]="{'form_submit_inv':verificarValides()==false, 'form_submit':verificarValides()==true}">
+            <img src="assets/images/plus.svg" alt="yoast seo" height="20" width="20" class="iconoAgre" /> Agregar
+        </button>{{!verificarValides()}}
+
+    </form>
+
+</div>
