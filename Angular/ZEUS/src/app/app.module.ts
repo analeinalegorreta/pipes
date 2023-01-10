@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //Rutas
 import{APP_ROUTING} from './app.routes';
@@ -17,6 +17,8 @@ import { AboutComponent } from './component/about/about.component';
 import { HeroinasComponent } from './component/heroinas/heroinas.component';
 import { HeroeComponent } from './component/heroe/heroe.component';
 import { GrupoComponent } from './component/grupo/grupo.component';
+import { FormularioComponent } from './component/formulario/formulario.component';
+import { OnlyNumber } from './directive/onlyNumber';
 
 
 
@@ -29,14 +31,16 @@ import { GrupoComponent } from './component/grupo/grupo.component';
     HeroinasComponent,
     HeroeComponent,
     GrupoComponent,
-    
+    FormularioComponent,
+    OnlyNumber
 
   ],
   imports: [
     BrowserModule,
     APP_ROUTING,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     HeroinasService
